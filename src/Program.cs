@@ -6,6 +6,6 @@ Console.WriteLine("Hello, World!");
 
 LogTimeHelper.Start(args);
 
-Thread.Sleep(10000);
-Thread.Sleep(10000);
-Thread.Sleep(10000);
+//Thread.Sleep(10000);
+//Thread.Sleep(10000);
+//Thread.Sleep(10000);
