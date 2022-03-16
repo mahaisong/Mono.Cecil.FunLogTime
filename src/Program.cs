@@ -1,6 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using Microsoft.Extensions.Logging;
-using D1yuan.InjectionLogger;
+using Microsoft.Extensions.Logging; 
 using Mono.Cecil.FunLogTimeNet;
 
 Console.WriteLine("Hello, World!");

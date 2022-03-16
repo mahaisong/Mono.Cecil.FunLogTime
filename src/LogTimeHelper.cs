@@ -10,7 +10,7 @@ using System.Reflection;
 //NET6 都实现Log
 using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Console;
+using Microsoft.Extensions.Logging.Console; 
 
 
 namespace Mono.Cecil.FunLogTimeNet
