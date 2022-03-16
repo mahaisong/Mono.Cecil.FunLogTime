@@ -11,7 +11,7 @@ using System.Reflection;
 using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Console;
-
+using System.Text;
 
 namespace Mono.Cecil.FunLogTimeNet
 {
@@ -200,13 +200,12 @@ namespace Mono.Cecil.FunLogTimeNet
                         Logger.LogInformation("打不开文件" + path);
                     }
                 };
-                Logger.LogInformation($"是否需要自动更名？？？Y/N");
-                Logger.LogInformation($"是否需要自动更名？？？Y/N");
-                Logger.LogInformation($"是否需要自动更名？？？Y/N");
-                Logger.LogInformation($"是否需要自动更名？？？Y/N");
-                Logger.LogInformation($"是否需要自动更名？？？Y/N");
-                Logger.LogInformation($"是否需要自动更名？？？Y/N");
-                Logger.LogInformation($"是否需要自动更名？？？Y/N");
+                StringBuilder stringBuilder = new StringBuilder();
+                for (int i = 0; i < 5; i++)
+                {
+                    stringBuilder.AppendLine($"是否需要自动更名？？？Y/N");
+                } 
+                Logger.LogInformation(stringBuilder.ToString());
                 string isUpdateName = Console.ReadLine();
                 if (isUpdateName.Contains("y", StringComparison.OrdinalIgnoreCase))
                 {
