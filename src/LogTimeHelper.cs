@@ -79,6 +79,10 @@ namespace Mono.Cecil.FunLogTimeNet
                             {
                                 File.Delete(loggerdllPath);
                             }
+                            if (File.Exists(UpdateSourceFilePath))
+                            {
+                                File.Delete(UpdateSourceFilePath);
+                            } 
 
                             string curdllPath = Path.Combine(System.Environment.CurrentDirectory, "D1yuan.InjectionLogger.dll");
 
@@ -89,10 +93,10 @@ namespace Mono.Cecil.FunLogTimeNet
 
                             // 获取程序集元数据 
 
-                            FileVersionInfo fileVersionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
+                            //FileVersionInfo fileVersionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
 
-                            //插入程序集引用
-                            moduleDefinition.AssemblyReferences.Add(new AssemblyNameReference(fileVersionInfo.ProductName, new Version(fileVersionInfo.ProductVersion)));
+                            ////插入程序集引用
+                            //moduleDefinition.AssemblyReferences.Add(new AssemblyNameReference(fileVersionInfo.ProductName, new Version(fileVersionInfo.ProductVersion)));
 
                             moduleDefinition.ImportReference(typeof(D1yuan.InjectionLogger.DLog));
                             //加入1个D1yuan.InjectionLogger.DLog类型--需要执行的dll自己引用了D1yuan.InjectionLogger
