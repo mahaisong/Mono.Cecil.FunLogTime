@@ -197,6 +197,12 @@ namespace Mono.Cecil.FunLogTimeNet
                     }
                 };
                 Logger.LogInformation($"是否需要自动更名？？？Y/N");
+                Logger.LogInformation($"是否需要自动更名？？？Y/N");
+                Logger.LogInformation($"是否需要自动更名？？？Y/N");
+                Logger.LogInformation($"是否需要自动更名？？？Y/N");
+                Logger.LogInformation($"是否需要自动更名？？？Y/N");
+                Logger.LogInformation($"是否需要自动更名？？？Y/N");
+                Logger.LogInformation($"是否需要自动更名？？？Y/N");
                 string isUpdateName = Console.ReadLine();
                 if (isUpdateName.Contains("y", StringComparison.OrdinalIgnoreCase))
                 {
